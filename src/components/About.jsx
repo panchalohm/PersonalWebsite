@@ -42,14 +42,14 @@ const About = () => {
 
       <motion.p 
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]" 
+        className="mt-4 text-secondary text-[17px] max-w-5xl leading-[30px]" 
       >
-        As a dedicated Software Engineer, I’ve continuously expanded my skills through both coursework and hands-on projects, always striving to learn and grow. 
-        My time at DLB Associates has provided me with valuable industry experience in full-stack development, web development, and AI automation, 
-        along with a deep understanding of frameworks like .NET and Blazor. I’ve worked on various projects, including an AI Website using the MERN Stack, 
-        as well as AI Automation, DoSmart, and BitTracker using React, SQL, and NodeJS. My strong work ethic, teamwork, 
-        and problem-solving skills have been essential in overcoming challenges and achieving successful results. 
-        I invite you to explore my website to learn more about my experiences.
+        As a dedicated Software Engineer, I am passionate about learning and growing in the technology field, as well as consistently expanding my skills through coursework and hands on projects. My internship at DLB Associates has provided me with invaluable industry experience, especially in full-stack development, web-development, and AI automation. Also allowing me to deepen my understanding of frameworks like .NET and Blazor and apply this knowledge to real world scenearios.
+        <br className='sm:block hidden' /> <br className='sm:block hidden' /> 
+        In addition to my industry experience, I have further honed my technical and problem solving skills through personal projects. For example AnonymousMessage, developed using the MERN stack and Next.js, integrates AI and provides advanced user authentication, showcasing a production level application. Another project, BitTracker, utilizes React, APIs, and Chart.js to deliver real-time data tracking, demonstrating dynamic, data driven interfaces. Finally, DoSmart, a task management application built with React, Node.js, and PostgreSQL, highlighting a responsive and efficient web application.
+        <br className='sm:block hidden' /> <br className='sm:block hidden' /> 
+        My strong work ethic, collaboration skills, and a pursuit of innovative solutions have been key to overcoming obstacles and delivering successful results. I'm eager to continue applying these skills in future opportunities and contributing to impactful projects that drive meaningful change.
+
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

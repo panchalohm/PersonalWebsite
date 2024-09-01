@@ -4,7 +4,9 @@ import sql from '../assets/tech/sql.png';
 import psql from '../assets/tech/ppsql.png';
 import csharp from '../assets/tech/csharp.png';
 import dotnet from '../assets/tech/dotnet.png';
-import c from '../assets/tech/c.png';
+import dlb from '../assets/tech/dlb2.png';
+import cn from '../assets/tech/trycn.png';
+import cpath from '../assets/tech/codepath.png';
 
 import { //Content of different sections.
     mobile,
@@ -49,7 +51,7 @@ import { //Content of different sections.
   
   const services = [
     {
-      title: "Full Stack",
+      title: "Full Stack Development",
       icon: mobile,
     },
     {
@@ -60,13 +62,13 @@ import { //Content of different sections.
       title: "AI/Automation",
       icon: creator,
     },
+    {
+      title: "Database Management",
+      icon: web,
+    },
   ];
   
   const technologies = [
-    {
-      name: "Dotnet",
-      icon: dotnet,
-    },
     {
       name: "Python",
       icon: python,
@@ -74,18 +76,6 @@ import { //Content of different sections.
     {
       name: "Java",
       icon: java,
-    },
-    {
-      name: "SQL",
-      icon: sql,
-    },
-    {
-      name: "PSQL",
-      icon: psql,
-    },
-    {
-      name: "Csharp",
-      icon: csharp,
     },
     {
       name: "HTML 5",
@@ -99,7 +89,7 @@ import { //Content of different sections.
       name: "JavaScript",
       icon: javascript,
     },
-    {//could replace if needed
+    {
       name: "TypeScript",
       icon: typescript,
     },
@@ -115,46 +105,59 @@ import { //Content of different sections.
       name: "Node JS",
       icon: nodejs,
     },
+    {
+      name: "Dotnet",
+      icon: dotnet,
+    },
+    {
+      name: "Csharp",
+      icon: csharp,
+    },
+    {
+      name: "SQL",
+      icon: sql,
+    },
+    {
+      name: "PSQL",
+      icon: psql,
+    },
   ];
   
   const experiences = [
     {
       title: "Software Engineer Intern",
       company_name: "DLB Associates",
-      icon: meta,
+      icon: dlb,
       iconBg: "#E6DEDD",
       date: "Jun 2024 - Aug 2024",
       points: [
-        "Developing web applications using Blazor, .NET and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Developed web applications using Blazor, .NET, and Azure Services.",
+        "Worked closely with the contract team to gather requirements, align on project goals, and deliver solutions that met business needs.",
+        "Created a Contract Details Database application to automate the process of gathering information of a contract using various cutting edge technologies.",
+        "Implemented new features and fixed bugs on company website for a responsive design and ensuring cross-browser compatibility.",
       ],
     },
     {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
+      title: "CodePath",
+      company_name: "",
+      icon: cpath,
       iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
+      date: "Current",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
+        "Engaged in hands-on practice with algorithms, data structures, and problem-solving techniques, improving technical interview skills.",
+        "Received mentorship from industry professionals and participated in advanced information sessions from senior engineers.",
+        "Developed expertise in Big O notation, recursion, dynamic programming, and more complex data structures.",      ],
     },
     {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
+      title: "Technology Tutor",
+      company_name: "Code Ninjas",
+      icon: cn,
       iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
+      date: "Jul 2023 - May 2024",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Taught students aged 7-14 the fundamentals of coding with JavaScript and game development using C# and Unity, fostering problem solving and debugging skills.",
+        "Assisted in problem-solving and debugging, creating a hands-on learning environment.",
+        "Guided students in building a strong programming foundation and logical thinking skills by explaining complex topics and applying them through a project based approach.",
       ],
     },
   ];
@@ -188,9 +191,9 @@ import { //Content of different sections.
   
   const projects = [
     {
-      name: "Contract Database Automation",
+      name: "Contract Database Automation App",
       description:
-        "Developed during my internship at DLB Associates, this project involves building a robust Contract Details Database system. The system automates the extraction of text from documents received via email, leverages Azure Document Intelligence for OCR, and passes a database schema and extracted data using Azure AI to generate SQL queries that populate a database with the extracted contract details. By combining modern web technologies with advanced tools like Azure AI and Document Intelligence, and employing development skills in C#, Blazor, and SQL, this project streamlines the handling of contract data efficiently.",
+        "Developed during my internship at DLB Associates, this project involves developing a robust Contract Details Database system. Automating the extraction of text from documents received via email, leveraging Azure Document Intelligence for OCR, and passing a database schema and extracting data using Azure AI to generate SQL queries that populate a database with the extracted contract details. By combining modern web technologies with advanced tools like Azure AI and Document Intelligence, and employing development skills in C#, Blazor, and SQL, this project streamlines the handling of contract data efficiently.",
       tags: [
         {
           name: "Blazor",
@@ -202,27 +205,31 @@ import { //Content of different sections.
         },
         {
           name: "AzureAI",
-          color: "pink-text-gradient",
+          color: "black-text-gradient",
         },
         {
           name: ".NET",
-          color: "pink-text-gradient",
+          color: "orange-text-gradient",
         },
         {
           name: "SQL",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
+      // image: tripguide,
     },
     {
-      name: "SachAI",
+      name: "AnonymousMessage",
       description:
-        "Production level application ",
+        "AnonymousMessage is a production-level application built with the MERN stack and Next.js, featuring advanced AI integration. The app ensures secure user authentication and verification through OTP, using Resend.js and Auth.js. With a user friendly UI, AnonymousMessage offers a seamless and scalable experience for anonymous communication/feedback. The app includes robust security to protect user data, real-time message delivery, and a responsive design that adapts to various devices, ensuring accessibility and privacy for all users.",
       tags: [
         {
           name: "Next.js",
           color: "blue-text-gradient",
+        },
+        {
+          name: "TypeScript",
+          color: "orange-text-gradient",
         },
         {
           name: "Auth.js",
@@ -233,13 +240,13 @@ import { //Content of different sections.
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      // image: carrent,
+      // source_code_link: "https://github.com/",
     },
     {
-      name: "Bit Track",
+      name: "BitTracker",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "BitTracker is a fully responsive cryptocurrency tracker app built with React JS, Material UI, and Chart JS. It leverages the Context API for efficient state management and integrates the CoinGecko API for real-time backend data. The app features Firebase version 9 with Email and Google authentication, along with a Firestore Database that supports full CRUD operations. Additionally, BitTracker includes secure configuration of Firestore Database rules, providing a comprehensive learning experience in modern web development.",
       tags: [
         {
           name: "React",
@@ -250,17 +257,17 @@ import { //Content of different sections.
           color: "green-text-gradient",
         },
         {
-          name: "AirCode.io",
+          name: "Chart.js",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      // image: jobit,
+      // source_code_link: "https://github.com/",
     },
     {
       name: "DoSmart",
       description:
-        "DoSmart is an intuitive to-do list application built with React, Node.js, and PostgreSQL. Designed with user productivity in mind, DoSmart offers seamless user authentication, ensuring that each user's tasks are securely stored in a personalized database. Whether you need to add, remove, or edit tasks, DoSmart provides a streamlined interface to manage your daily to-dos efficiently.",
+        "DoSmart is an intuitive to-do list application built with React, Node.js, and PostgreSQL. Designed with user productivity in mind, DoSmart offers a seamless log-in experience, ensuring that each user's tasks are securely stored in a personalized database. Whether you need to add, remove, or edit tasks, DoSmart provides a streamlined interface to manage your daily to-dos efficiently.",
       tags: [
         {
           name: "React",
@@ -275,8 +282,8 @@ import { //Content of different sections.
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      // image: tripguide,
+      // source_code_link: "https://github.com/",
     },
   ];
   

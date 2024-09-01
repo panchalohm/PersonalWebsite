@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Welcome to DLB!</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="siteOptionV3.css" />
+	<script type="text/javascript" src="scripts/main.js"></script>
+	<script type="text/javascript" src="scripts/nav.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+	
+<body>
+    <div class="joinUs">
+        <video class="joinUsVid" loop muted autoplay playsinline preload="auto">
+            <source src="./images/JoinUs_Square_dark_VP9.webm" type="video/webm">
+            <source src="./images/JoinUs_Square_dark.mov" type="video/mp4">
+        </video>
+    </div>
+    <div id="choosePath"><p>Choose your experience with <span class="logoFont logoTextBlue">dlb</span><span class="logoFont logoTextGrey">associates</span> . . .</p></div>
+    <div id="fullOptionsSection">
+        <div class="fullOptionsInner">
+            <video class="fullBackgroundVid" loop muted autoplay playsinline preload="auto">
+                <source src="./images/matrix_background_VP9_transform101.webm" type="video/webm">
+                <source src="./images/matrix_background.mp4" type="video/mp4">
+                <!-- <source src="./assets/video/dlb-city-graphic.webp" type="video/webp"> -->
+            </video>
+            <video class="fullBackgroundVid fullBackgroundVidBottom" loop muted autoplay playsinline preload="auto">
+                <source src="./images/matrix_background_VP9_transform101.webm" type="video/webm">
+                <source src="./images/matrix_background.mp4" type="video/mp4">
+                <!-- <source src="./assets/video/dlb-city-graphic.webp" type="video/webp"> -->
+            </video>
+        </div>
+        <div class="optionContainers" id="funContainer">
+            <div class="optionInnerContainers" id="innerLeft">
+                <div class="fullVidContainer">
+                    <video id="gamified" class="halfBackgroundVid personVideo" loop muted autoplay playsinline preload="auto">
+                        <source src="./images/Gamified.webm" type="video/webm">
+                        <source src="./images/Gamified.mov" type="video/mp4">
+                        <!-- <source src="./assets/video/dlb-city-graphic.webp" type="video/webp"> -->
+                    </video>
+                </div>
+                <div class="pillContainerBorder"></div>
+                <div class="pillTextContainer pillTextContainerRed" id="redPillTextContainer">
+                    <p id="rpText">neon pill</p>
+                    <div class="selectedSection" id="redSelect"></div>
+                </div>
+                <div class="pillImgContainer" id="rpImgContainer"><img class="pillImg" src="images/Limegreen_pill.png"></div>
+            </div>
+        </div>
+        <div class="optionContainers" id="boringContainer">
+            <div class="optionInnerContainers" id="innerRight">
+                <div class="fullVidContainer">
+                    <video class="halfBackgroundVid personVideo" loop muted autoplay playsinline preload="auto">
+                        <source src="./images/Casual.webm" type="video/webm">
+                        <source src="./images/Casual.mov" type="video/mp4">
+                        <!-- <source src="./assets/video/dlb-city-graphic.webp" type="video/webp"> -->
+                    </video>
+                </div>
+                <div class="pillContainerBorder"></div>
+                <div class="pillTextContainer pillTextContainerBlue" id="bluePillTextContainer">
+                    <div class="selectedSection" id="blueSelect"></div>
+                    <p id="bpText">grey pill</p>
+                </div>
+                <div class="pillImgContainer" id="bpImgContainer"><img class="pillImg" src="images/Grey_pill.png"></div>
+            </div>
+        </div>
+    </div>
+    <div class="descriptorTextContainer descriptorTextContainerRed" id="rpDescriptorContainer">
+        <div class="descriptorInner">
+            <p>Up for the challenge?<br>Try our <span id="rpRed">FULLY INTERACTIVE GAMIFIED</span> experience.</p>
+        </div>
+    </div>
+    <div id="logoContainer">
+        <div id="logoInner">
+            <div id="homeLogoBoxContainer">
+                <img src="images/dlb_square_only.svg" id="homeLogo">
+            </div>
+            <div id="homeLogoTextContainer"><img src="images/dlb_text_onlly.svg" id="homeLogoText"></div>
+        </div>
+    </div>
+    <div class="descriptorTextContainer descriptorTextContainerBlue" id="bpDescriptorContainer">
+        <div class="descriptorInner">
+            <p>Just the facts?<br> Skip the games and cut <span class="bpBlue">STRAIGHT</span> to the <span class="bpBlue">CONTENT.</span></p>
+        </div>
+    </div>
+    <!-- <div class="originalSiteContainer">
+        <p>Old Site</p>
+    </div>-->
+    <script>
+        window.onresize = function (event) {
+            isMobile = window.matchMedia("screen and (any-pointer:coarse), screen and (any-pointer:none)").matches;
+            wheelPositioning();
+        };
+        var clickDetected = false;
+        var isMobile;
+        $(document).ready(function () {
+            isMobile = window.matchMedia("screen and (any-pointer:coarse), screen and (any-pointer:none)").matches;
+            $("#logoContainer").css("transform", "translate(-50%, -50%)");
+            $(".fullOptionsInner").css("opacity", "1");
+            $(".personVideo").css("opacity", "1");
+            $(".personVideo").css("transform", "translate(-50%,0%)");
+            $(".pillTextContainerRed").css("transform", "translateX(-50%)");
+            $(".pillTextContainerBlue").css("transform", "translateX(-50%)");
+            $(".pillImgContainer").css("opacity", "1");
+            $(".pillImgContainer").css("transform", "translateY(0%)");
+            $(".descriptorTextContainerRed").css("transform", "translateX(0%)");
+            $(".descriptorTextContainerBlue").css("transform", "translateX(0%)");
+
+            if (isMobile) {
+                $("#choosePath").css("transform", "translate(0%, 0%)");
+            }
+            else {
+                $("#choosePath").css("transform", "translate(-50%, 0%)");
+            }
+
+            $(document).click(function () {
+                clickDetected = true;
+            });
+
+            ////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////
+            ////////////////////NAV ROUTING/////////////////////////////////
+            ////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////
+
+            var path = window.location.pathname;
+            var page = path.split("/").pop();
+            var urlBase = location.href.substring(0, location.href.lastIndexOf("/") + 1);
+
+            $(".joinUs").click(function () {
+                window.location.hash = "Option=boring#mute=true";
+                optionRouting(window.location.hash, "careers.html", page, urlBase);
+            });
+
+            $("#boringContainer").click(function () {
+                window.location.hash = "Option=boring#mute=true";
+                optionRouting(window.location.hash, "home.html", page, urlBase);
+            });
+
+            $("#funContainer").click(function () {
+                window.location.hash = "Option=fun";
+                optionRouting(window.location.hash, "home.html", page, urlBase);
+            });
+
+            ////////////////////////////////////////////////////////////////
+        });
+
+        //$(".originalSiteContainer").click(function () {
+          //  window.location.href = "./old/home.html"
+        //}); NEEDS TO BE REMOVED
+
+        $(".optionContainers").click(function () {
+            $("#logoContainer").css("transition", "filter 0.3s ease-in-out, transform 0.3s 1.4s ease-in-out");
+            $(".fullOptionsInner").css("transition", "opacity 0.3s 1.1s linear");
+            $(".personVideo").css("transition", "opacity 0.3s 0.8s ease-in-out, transform 0.3s 0.8s linear");
+            $(".pillTextContainerRed").css("transition", "transform 0.3s 0.5s linear");
+            $(".pillTextContainerBlue").css("transition", "transform 0.3s 0.5s linear");
+            $(".pillImgContainer").css("transition", "opacity 0.2s 0.3s ease-in-out");
+            $("#choosePath").css("transition", "transform 0.3s linear");
+            $(".descriptorTextContainerRed").css("transition", "transform 0.3s linear");
+            $(".descriptorTextContainerBlue").css("transition", "transform 0.3s linear");
+
+            $("#logoContainer").css("transform", "translate(-50%, -400%)");
+            $(".fullOptionsInner").css("opacity", "0");
+            $(".personVideo").css("opacity", "0");
+            $(".personVideo").css("transform", "translate(-50%,-10%)");
+            $(".pillTextContainerRed").css("transform", "translateX(-300%)");
+            $(".pillContainerBorder").css("opacity", "0");
+            $(".pillTextContainerBlue").css("transform", "translateX(300%)");
+            $(".pillImgContainer").css("opacity", "0");
+            $("#choosePath").css("transform", "translate(-50%, -200%)");
+            $(".descriptorTextContainerRed").css("transform", "translateX(-200%)");
+            $(".descriptorTextContainerBlue").css("transform", "translateX(200%)");
+        });
+
+
+        // Fun & Boring Container Mouse Overs
+
+        var funContainer = document.getElementById('funContainer');
+        var audioMouseOver1 = new Audio('audio/siteoptions_Funky_Glitch_Hop_A.mp3');
+        audioMouseOver1.volume = 0.4;
+
+        funContainer.addEventListener('mouseover', function () {
+            audioMouseOver2.pause(); // Pause audioMouseOver2 if it is playing
+            if (clickDetected) {
+                audioMouseOver1.play();
+            }
+        });
+
+        funContainer.addEventListener('mouseout', function () {
+            audioMouseOver1.pause(); // Pause audioMouseOver1 when mouse leaves funContainer
+        });
+
+        var boringContainer = document.getElementById('boringContainer');
+        var audioMouseOver2 = new Audio('audio/site_options_Crickets_Calling.mp3');
+        audioMouseOver2.volume = 0.4;
+
+        boringContainer.addEventListener('mouseover', function () {
+            audioMouseOver1.pause(); // Pause audioMouseOver1 if it is playing
+            if (clickDetected) {
+                audioMouseOver2.play();
+            }
+        });
+
+        boringContainer.addEventListener('mouseout', function () {
+            audioMouseOver2.pause(); // Pause audioMouseOver2 when mouse leaves boringContainer
+        });
+
+
+        // Red Pill Mouse Overs
+
+        var redPillTextContainer = document.getElementById('redPillTextContainer');
+
+        // Create an array of the WAV files
+        var audioFilesRED = [
+            'audio/red_pill_ScratchRecord_EC04_40_3.wav',
+            'audio/red_pill_ElectGuitarScreamD_MA022702.wav',
+            'audio/red_pill_ScratchRecord_EC04_39_4.wav',
+            'audio/red_pill_RecordScratch_BW_26133.wav',
+            'audio/red_pill_RecordScratch_EC01_97_8.wav',
+            'audio/red_pill_BluesGuitarShrtS_SDT2057802.wav'
+
+        ];
+
+        var currentAudio = null; // Track the currently playing audio
+
+        redPillTextContainer.addEventListener('mouseover', function () {
+            // Check if there is an audio playing
+            if (currentAudio && !currentAudio.paused) {
+                // Pause the currently playing audio
+                currentAudio.pause();
+            }
+
+            // Randomly select an audio file from the array
+            var randomIndex = Math.floor(Math.random() * audioFilesRED.length);
+            var randomAudio = new Audio(audioFilesRED[randomIndex]);
+
+            // Set the volume level (0.5 for example)
+            randomAudio.volume = 0.4;
+
+            // Set the currently playing audio to the newly selected audio
+            currentAudio = randomAudio;
+
+            // Play the randomly selected audio file
+            if (clickDetected) {
+                randomAudio.play();
+            }
+        });
+
+
+
+
+        // Blue Pill Mouse Overs
+
+
+        var bluePillTextContainer = document.getElementById('bluePillTextContainer');
+
+        // Create an array of the WAV files
+        var audioFilesBLUE = [
+            'audio/blue_pill_Disappointing_Prize.mp3',
+            'audio/blue_pill_Lute_Out_of_Tune_Guitar_Metal_String_Twangs_OCP-0088-09.wav',
+            'audio/blue_pill_24339_disappoint_cartoon_notification-full.mp3',
+            'audio/blue_pill_Twang_Error.wav',
+            'audio/blue_pill_ComedyAccents_EC09_88_2.wav',
+            'audio/blue_pill_18316_cartoon_ukulele_disappoint-full.mp3'
+        ];
+
+        var currentAudio = null; // Track the currently playing audio
+
+        bluePillTextContainer.addEventListener('mouseover', function () {
+            // Check if there is an audio playing
+            if (currentAudio && !currentAudio.paused) {
+                // Pause the currently playing audio
+                currentAudio.pause();
+            }
+
+            // Randomly select an audio file from the array
+            var randomIndex = Math.floor(Math.random() * audioFilesBLUE.length);
+            var randomAudio = new Audio(audioFilesBLUE[randomIndex]);
+
+            // Set the volume level (0.5 for example)
+            randomAudio.volume = 0.4;
+
+            // Set the currently playing audio to the newly selected audio
+            currentAudio = randomAudio;
+
+            // Play the randomly selected audio file
+            if (clickDetected) {
+                randomAudio.play();
+            }
+        });
+
+
+
+        // Mouse click pills
+
+
+        var audioMouseClick1 = new Audio('audio/mouse_click_pills_ES_Sci_Fi_Portal_Warp.mp3');
+
+        var redPillTextContainer = document.getElementById('redPillTextContainer');
+        redPillTextContainer.addEventListener('click', function () {
+            audioMouseClick1.play();
+        });
+
+
+        var audioMouseClick2 = new Audio('audio/mouse_click_pills_ES_Sci_Fi_Portal_Warp.mp3');
+
+        var bluePillTextContainer = document.getElementById('bluePillTextContainer');
+        bluePillTextContainer.addEventListener('click', function () {
+            if (clickDetected) {
+                audioMouseClick2.play();
+            }
+        });
+
+
+
+
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y5WLK99T5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4Y5WLK99T5');
+    </script>
+
+</body>
+
+</html>
+			
