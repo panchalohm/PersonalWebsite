@@ -32,7 +32,7 @@ const Navbar = () => {
 
         <div className="bg-white rounded-lg p-2">
           <a
-            href="https://drive.google.com/file/d/1D0xO5mMLofQyh-whzruh0qY0OEi-TXal/view?usp=sharing"
+            href="https://drive.google.com/file/d/1fVbyt25dW0vrcM5hVgAy-Z_QDsy7akyR/view?usp=sharing"
             // href="NEWRESM.pdf"
             target="_blank"
             className="text-black hover:underline"
