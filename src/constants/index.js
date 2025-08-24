@@ -6,7 +6,9 @@ import csharp from '../assets/tech/csharp.png';
 import dotnet from '../assets/tech/dotnet.png';
 import dlb from '../assets/tech/dlb2.png';
 import cn from '../assets/tech/trycn.png';
-import cpath from '../assets/tech/codepath.png';
+import amazon from '../assets/company/amazon.png';
+import aws from '../assets/tech/aws.png';
+import azure from '../assets/tech/azure.png';
 
 import { //Content of different sections.
     mobile,
@@ -51,20 +53,20 @@ import { //Content of different sections.
   
   const services = [
     {
-      title: "Full Stack Development",
-      icon: mobile,
+      title: "Software Engineering",
+      icon: web,
     },
     {
-      title: "Web Development",
-      icon: backend,
+      title: "Full Stack Development",
+      icon: mobile,
     },
     {
       title: "AI/Automation",
       icon: creator,
     },
     {
-      title: "Database Management",
-      icon: web,
+      title: "Web Development",
+      icon: backend,
     },
   ];
   
@@ -78,12 +80,24 @@ import { //Content of different sections.
       icon: java,
     },
     {
-      name: "HTML 5",
-      icon: html,
+      name: "AWS",
+      icon: aws,
     },
     {
-      name: "CSS 3",
-      icon: css,
+      name: "Azure",
+      icon: azure,
+    },
+    {
+      name: "React JS",
+      icon: reactjs,
+    },
+    {
+      name: "Node JS",
+      icon: nodejs,
+    },
+    {
+      name: "Dotnet",
+      icon: dotnet,
     },
     {
       name: "JavaScript",
@@ -94,20 +108,8 @@ import { //Content of different sections.
       icon: typescript,
     },
     {
-      name: "React JS",
-      icon: reactjs,
-    },
-    {
       name: "Tailwind CSS",
       icon: tailwind,
-    },
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "Dotnet",
-      icon: dotnet,
     },
     {
       name: "Csharp",
@@ -125,6 +127,17 @@ import { //Content of different sections.
   
   const experiences = [
     {
+      title: "SDE Intern",
+      company_name: "Amazon",
+      icon: amazon,
+      iconBg: "white",
+      date: "May 2025 - Aug 2025",
+      points: [
+        "Designed and developed a cloud-native simulation orchestration tool using Java, AWS CDK, and REST APIs, enabling the analysis of station-specific delivery routing plans with configurable metrics and date ranges.",
+        "Automated simulation tracking, results extraction, and report generation by utilizing AWS Lambda, S3, DynamoDB, and IAM with internal APIs, reducing manual analysis and accelerating decision-making.",
+        "Architected and thoroughly tested a scalable and reliable system from the ground up, leveraging clean design patterns and aligning with Amazon’s engineering standards.",      ],
+    },
+    {
       title: "Software Engineer Intern",
       company_name: "DLB Associates",
       icon: dlb,
@@ -136,17 +149,6 @@ import { //Content of different sections.
         "Created a Contract Details Database application to automate the process of gathering information of a contract using various cutting edge technologies.",
         "Implemented new features and fixed bugs on company website for a responsive design and ensuring cross-browser compatibility.",
       ],
-    },
-    {
-      title: "CodePath",
-      company_name: "",
-      icon: cpath,
-      iconBg: "#383E56",
-      date: "Current",
-      points: [
-        "Engaged in hands-on practice with algorithms, data structures, and problem-solving techniques, improving technical interview skills.",
-        "Received mentorship from industry professionals and participated in advanced information sessions from senior engineers.",
-        "Developed expertise in Big O notation, recursion, dynamic programming, and more complex data structures.",      ],
     },
     {
       title: "Technology Tutor",

@@ -44,12 +44,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-5xl leading-[30px]" 
       >
-        As a dedicated Software Engineer, I am passionate about learning and growing in the technology field, as well as consistently expanding my skills through coursework and hands on projects. My internship at DLB Associates has provided me with invaluable industry experience, especially in full-stack development, web-development, and AI automation. Also allowing me to deepen my understanding of frameworks like .NET and Blazor and apply this knowledge to real world scenearios.
+        As a dedicated Software Engineer, I am passionate about learning and growing in the technology field with a strong foundation in full-stack development, cloud technologies, and AI-powered systems. Most recently, I interned at Amazon, where I designed and built a scalable simulation orchestration tool for the Last Mile Routing & Planning team—an experience that sharpened my ability to build high-impact, production-ready systems using Java, AWS Lambda, DynamoDB, and internal APIs.
         <br className='sm:block hidden' /> <br className='sm:block hidden' /> 
-        In addition to my industry experience, I have further honed my technical and problem solving skills through personal projects. For example AnonymousMessage, developed using the MERN stack and Next.js, integrates AI and provides advanced user authentication, showcasing a production level application. Another project, BitTracker, utilizes React, APIs, and Chart.js to deliver real-time data tracking, demonstrating dynamic, data driven interfaces. Finally, DoSmart, a task management application built with React, Node.js, and PostgreSQL, highlighting a responsive and efficient web application.
+        Previously, I interned at DLB Associates, where I developed a full-stack automation tool for contract management and contributed to front-end enhancements on the company’s client-facing website. I gained hands-on experience with C#, .NET, Blazor, and Azure AI services, applying cutting-edge automation to real business challenges.
         <br className='sm:block hidden' /> <br className='sm:block hidden' /> 
-        My strong work ethic, collaboration skills, and a pursuit of innovative solutions have been key to overcoming obstacles and delivering successful results. I'm eager to continue applying these skills in future opportunities and contributing to impactful projects that drive meaningful change.
-
+        Outside of industry roles, I actively pursue technical and product challenges through personal projects. From building AnonymousMessage, a MERN + OpenAI-powered feedback platform with OTP-based authentication, to crafting BitTracker, a real-time crypto tracker with Chart.js and Firebase, my projects reflect a commitment to clean architecture, modern design, and scalable systems.
+        <br className='sm:block hidden' /> <br className='sm:block hidden' />
+        I bring a strong work ethic, an eye for detail, and a deep curiosity for how things work—from backend services to user-facing interfaces. I thrive in collaborative environments and I’m always looking to push my skills further. I’m excited to take on new challenges, contribute to impactful teams, and build software that drives meaningful change.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
