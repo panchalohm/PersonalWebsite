@@ -30,7 +30,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <div className="bg-white rounded-lg p-2 hidden md:block">
+        {/* <div className="bg-white rounded-lg p-2 hidden md:block">
           <a
             href="https://drive.google.com/file/d/1Dh3QHK3Fs0BCcjourLBqPeEW1CxiXBdW/view?usp=sharing"
             // href="NEWRESM.pdf"
@@ -39,7 +39,7 @@ const Navbar = () => {
           >
             My Resume
           </a>
-        </div>
+        </div> */}
 
           <div className="bg-white rounded-lg p-2 hidden md:block">
             <a
