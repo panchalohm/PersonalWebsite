@@ -9,6 +9,8 @@ import cn from '../assets/tech/trycn.png';
 import amazon from '../assets/company/amazon.png';
 import aws from '../assets/tech/aws.png';
 import azure from '../assets/tech/azure.png';
+// import saas from '../assets/tech/saas.png';
+// import rag from '../assets/tech/rag.png';
 
 import { //Content of different sections.
     mobile,
@@ -34,6 +36,8 @@ import { //Content of different sections.
     carrent,
     jobit,
     tripguide,
+    // rag,
+    // saas,
   } from "../assets";
   
   export const navLinks = [
@@ -193,6 +197,110 @@ import { //Content of different sections.
   
   const projects = [
     {
+      name: "UpBrand",
+      description:
+        "This project is a full-stack, AI-driven SaaS application that generates brand-aware copy snippets and keywords tailored to customer inputs. It features a scalable Python backend built with FastAPI, deployed serverlessly on AWS Lambda and API Gateway, and integrates advanced language models for intelligent content generation. The frontend is a modern Next.js and React application, styled with Tailwind CSS and deployed on Vercel. The system demonstrates end-to-end SaaS architecture, cloud infrastructure design, and production-ready AI integration.",
+      tags: [
+        {
+          name: "Python",
+          color: "green-text-gradient",
+        },
+        {
+          name: "AWS",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "AI",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "TypeScript",
+          color: "black-text-gradient",
+        },
+      ],
+      // image: SaaS,
+      source_code_link: "https://github.com/panchalohm",
+    },
+        {
+      name: "DocQuery",
+      description:
+        "This project is a Retrieval-Augmented Generation (RAG) system that enables intelligent, context-aware question answering over custom documents and datasets. Built with Python, LangChain, and FastAPI, it leverages vector embeddings and a scalable vector database to retrieve relevant context and generate high-quality AI responses. The system supports PDFs and dynamic data updates, includes automated testing for response quality, and runs locally or as a public API. It is deployed on AWS Lambda using Docker and CDK, with a modern static Next.js frontend for seamless interaction.",
+      tags: [
+        {
+          name: "Python",
+          color: "green-text-gradient",
+        },
+        {
+          name: "VectorDatabase",
+          color: "black-text-gradient",
+        },
+        {
+          name: "LangChain",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "AWS/Docker",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+      ],
+      // image: rag,
+      source_code_link: "https://github.com/panchalohm",
+    },
+    {
+      name: "AnonymousMessage",
+      description:
+        "AnonymousMessage is a production-level application built with the MERN stack and Next.js, featuring advanced AI integration. The app ensures secure user authentication and verification through OTP, using Resend.js and Auth.js. With a user friendly UI, AnonymousMessage offers a seamless and scalable experience for anonymous communication/feedback. The app includes robust security to protect user data, real-time message delivery, and a responsive design that adapts to various devices, ensuring accessibility and privacy for all users.",
+      tags: [
+        {
+          name: "Next.js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "TypeScript",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "Auth.js",
+          color: "green-text-gradient",
+        },
+        {
+          name: "AI",
+          color: "pink-text-gradient",
+        },
+      ],
+      // image: carrent,
+      // source_code_link: "https://github.com/panchalohm",
+    },
+    {
+      name: "BitTracker",
+      description:
+        "BitTracker is a fully responsive cryptocurrency tracker app built with React JS, Material UI, and Chart JS. It leverages the Context API for efficient state management and integrates the CoinGecko API for real-time backend data. The app features Firebase version 9 with Email and Google authentication, along with a Firestore Database that supports full CRUD operations. Additionally, BitTracker includes secure configuration of Firestore Database rules, providing a comprehensive learning experience in modern web development.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "TypeScript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Chart.js",
+          color: "pink-text-gradient",
+        },
+      ],
+      // image: jobit,
+      // source_code_link: "https://github.com/",
+    },
+        {
       name: "Contract Database Automation App",
       description:
         "Developed during my internship at DLB Associates, this project involves developing a robust Contract Details Database system. Automating the extraction of text from documents received via email, leveraging Azure Document Intelligence for OCR, and passing a database schema and extracting data using Azure AI to generate SQL queries that populate a database with the extracted contract details. By combining modern web technologies with advanced tools like Azure AI and Document Intelligence, and employing development skills in C#, Blazor, and SQL, this project streamlines the handling of contract data efficiently.",
@@ -220,73 +328,27 @@ import { //Content of different sections.
       ],
       // image: tripguide,
     },
-    {
-      name: "AnonymousMessage",
-      description:
-        "AnonymousMessage is a production-level application built with the MERN stack and Next.js, featuring advanced AI integration. The app ensures secure user authentication and verification through OTP, using Resend.js and Auth.js. With a user friendly UI, AnonymousMessage offers a seamless and scalable experience for anonymous communication/feedback. The app includes robust security to protect user data, real-time message delivery, and a responsive design that adapts to various devices, ensuring accessibility and privacy for all users.",
-      tags: [
-        {
-          name: "Next.js",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "TypeScript",
-          color: "orange-text-gradient",
-        },
-        {
-          name: "Auth.js",
-          color: "green-text-gradient",
-        },
-        {
-          name: "AI",
-          color: "pink-text-gradient",
-        },
-      ],
-      // image: carrent,
-      // source_code_link: "https://github.com/",
-    },
-    {
-      name: "BitTracker",
-      description:
-        "BitTracker is a fully responsive cryptocurrency tracker app built with React JS, Material UI, and Chart JS. It leverages the Context API for efficient state management and integrates the CoinGecko API for real-time backend data. The app features Firebase version 9 with Email and Google authentication, along with a Firestore Database that supports full CRUD operations. Additionally, BitTracker includes secure configuration of Firestore Database rules, providing a comprehensive learning experience in modern web development.",
-      tags: [
-        {
-          name: "React",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "TypeScript",
-          color: "green-text-gradient",
-        },
-        {
-          name: "Chart.js",
-          color: "pink-text-gradient",
-        },
-      ],
-      // image: jobit,
-      // source_code_link: "https://github.com/",
-    },
-    {
-      name: "DoSmart",
-      description:
-        "DoSmart is an intuitive to-do list application built with React, Node.js, and PostgreSQL. Designed with user productivity in mind, DoSmart offers a seamless log-in experience, ensuring that each user's tasks are securely stored in a personalized database. Whether you need to add, remove, or edit tasks, DoSmart provides a streamlined interface to manage your daily to-dos efficiently.",
-      tags: [
-        {
-          name: "React",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Node.js",
-          color: "green-text-gradient",
-        },
-        {
-          name: "PostgreSQL",
-          color: "pink-text-gradient",
-        },
-      ],
-      // image: tripguide,
-      // source_code_link: "https://github.com/",
-    },
+    // {
+    //   name: "DoSmart",
+    //   description:
+    //     "DoSmart is an intuitive to-do list application built with React, Node.js, and PostgreSQL. Designed with user productivity in mind, DoSmart offers a seamless log-in experience, ensuring that each user's tasks are securely stored in a personalized database. Whether you need to add, remove, or edit tasks, DoSmart provides a streamlined interface to manage your daily to-dos efficiently.",
+    //   tags: [
+    //     {
+    //       name: "React",
+    //       color: "blue-text-gradient",
+    //     },
+    //     {
+    //       name: "Node.js",
+    //       color: "green-text-gradient",
+    //     },
+    //     {
+    //       name: "PostgreSQL",
+    //       color: "pink-text-gradient",
+    //     },
+    //   ],
+    //   // image: tripguide,
+    //   // source_code_link: "https://github.com/",
+    // },
   ];
   
   export { services, technologies, experiences, testimonials, projects };
