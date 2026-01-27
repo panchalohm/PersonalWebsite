@@ -9,8 +9,11 @@ import cn from '../assets/tech/trycn.png';
 import amazon from '../assets/company/amazon.png';
 import aws from '../assets/tech/aws.png';
 import azure from '../assets/tech/azure.png';
-// import saas from '../assets/tech/saas.png';
-// import rag from '../assets/tech/rag.png';
+import saas from '../assets/tech/saas.png';
+import rag from '../assets/tech/rag.png';
+import tracker from '../assets/tech/tracker.png';
+import chatapp from '../assets/tech/chatapp.png';
+import contractdb from '../assets/tech/contractdb.png';
 
 import { //Content of different sections.
     mobile,
@@ -36,8 +39,6 @@ import { //Content of different sections.
     carrent,
     jobit,
     tripguide,
-    // rag,
-    // saas,
   } from "../assets";
   
   export const navLinks = [
@@ -222,7 +223,7 @@ import { //Content of different sections.
           color: "black-text-gradient",
         },
       ],
-      // image: SaaS,
+      image: saas,
       source_code_link: "https://github.com/panchalohm",
     },
         {
@@ -251,7 +252,7 @@ import { //Content of different sections.
           color: "blue-text-gradient",
         },
       ],
-      // image: rag,
+      image: rag,
       source_code_link: "https://github.com/panchalohm",
     },
     {
@@ -276,8 +277,8 @@ import { //Content of different sections.
           color: "pink-text-gradient",
         },
       ],
-      // image: carrent,
-      // source_code_link: "https://github.com/panchalohm",
+      image: chatapp,
+      source_code_link: "https://github.com/panchalohm",
     },
     {
       name: "BitTracker",
@@ -297,13 +298,13 @@ import { //Content of different sections.
           color: "pink-text-gradient",
         },
       ],
-      // image: jobit,
-      // source_code_link: "https://github.com/",
+      image: tracker,
+      source_code_link: "https://github.com/panchalohm",
     },
         {
       name: "Contract Database Automation App",
       description:
-        "Developed during my internship at DLB Associates, this project involves developing a robust Contract Details Database system. Automating the extraction of text from documents received via email, leveraging Azure Document Intelligence for OCR, and passing a database schema and extracting data using Azure AI to generate SQL queries that populate a database with the extracted contract details. By combining modern web technologies with advanced tools like Azure AI and Document Intelligence, and employing development skills in C#, Blazor, and SQL, this project streamlines the handling of contract data efficiently.",
+        "Developed during my internship at DLB Associates, this project involves developing a robust Contract Details Database system. Automating the extraction of text from documents received via email, leveraging Azure Document Intelligence for OCR, and passing a database schema and extracting data using Azure AI to generate SQL queries that populate a database with the extracted contract details. By combining modern web technologies with advanced tools like Azure AI and Document Intelligence, and employing development skills in C#, Blazor, and SQL, this project streamlines the handling of contract data efficiently. - DLB Associates property, no thumbnail allowed.",
       tags: [
         {
           name: "Blazor",
@@ -326,7 +327,8 @@ import { //Content of different sections.
           color: "pink-text-gradient",
         },
       ],
-      // image: tripguide,
+      image: contractdb,
+      source_code_link: "https://www.dlbassociates.com/",
     },
     // {
     //   name: "DoSmart",

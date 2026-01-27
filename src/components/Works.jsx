@@ -80,7 +80,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-5xl leading-[30px]"
         >
-          Here are a few standout projects I have developed, using full stack development and cutting edge web technologies.
+          Here are a few standout projects I have developed, using full stack development and AI/RAG technologies.
         </motion.p>
       </div>
 
