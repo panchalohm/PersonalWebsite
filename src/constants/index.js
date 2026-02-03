@@ -253,7 +253,7 @@ import { //Content of different sections.
         },
       ],
       image: rag,
-      source_code_link: "https://github.com/panchalohm",
+      source_code_link: "https://github.com/panchalohm/DocQuery",
     },
     {
       name: "AnonymousMessage",
